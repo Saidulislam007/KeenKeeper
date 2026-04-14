@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Timeline = () => {
+const Stats = () => {
     return (
         <div>
-            <h1>TimeLINE</h1>
+            <h1>Stats</h1> 
         </div>
     );
 };
 
-export default Timeline;
+export default Stats;
