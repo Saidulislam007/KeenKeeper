@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="bg-gray-200 p-2">
       <div className="max-w-7xl mx-auto flex justify-between items-center  p-2">
         
-        {/* Logo */}
+       
         <h1 className="text-3xl font-bold  px-3 py-1">
           KeenKeeper
         </h1>
@@ -55,7 +55,7 @@ const Navbar = () => {
 
         </div>
 
-        {/* Mobile Button */}
+       
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden border p-2 rounded-md"
@@ -64,7 +64,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden mt-2 p-4 flex flex-col gap-3 bg-gray-100">
 

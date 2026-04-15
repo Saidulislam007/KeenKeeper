@@ -9,6 +9,9 @@ import HomePages from './components/homePages/HomePages.jsx';
 import ErrorPage from './components/pages/ErrorPage.jsx';
 import Timeline from './components/pages/Timeline.jsx';
 import Stats from './components/pages/Stats.jsx';
+import Home from './components/pages/Home.jsx';
+import FriendDetails from './components/pages/FriendDetails.jsx';
+
 
 
 const router = createBrowserRouter([
@@ -16,7 +19,12 @@ const router = createBrowserRouter([
     path: "/",
     element: <HomePages></HomePages>,
     errorElement: <ErrorPage />,
-    children:[
+    children: [
+      {
+        index: true,
+        element: <Home></Home>,
+
+      },
       {
         path: "/timeline",
         element: <Timeline />,
@@ -25,6 +33,10 @@ const router = createBrowserRouter([
         path: "/stats",
         element: <Stats />,
       },
+      {
+        path:"/friendDetails/:id",
+        element: <FriendDetails></FriendDetails>
+      }
     ]
   },
 ]);
