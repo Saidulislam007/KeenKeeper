@@ -18,7 +18,7 @@ const Banner = () => {
           Your personal shelf of meaningful connections. Browse, tend, and nurture the <br></br> relationships that matter most.
         </p>
 
-        <button className="inline-flex items-center mt-6 gap-2 bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-md">
+        <button className="inline-flex items-center mt-6 gap-2 bg-emerald-900 hover:bg-teal-800 text-white px-6 py-3 rounded-md">
           <UserPlus size={18} />
           Add a Friend
         </button>

@@ -28,21 +28,37 @@ const Stats = () => {
       {/* Chart Box */}
       <div className="bg-white p-4 sm:p-8 lg:p-12 rounded-xl shadow max-w-3xl mx-auto">
 
-        <h2 className="text-sm sm:text-base text-gray-600 text-center sm:text-left mb-6">
+        <h2 className="text-lg font-semibold sm:text-base text-black text-center sm:text-left ">
           By Interaction Type
         </h2>
 
         {/* Responsive Chart */}
-        <div className="w-full h-[280px] sm:h-[320px] md:h-[360px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
+        <div className="w-full h-[280px] sm:h-[320px] md:h-[360px] flex items-center justify-center overflow-hidden">
+
+          {callCount === 0 && textCount === 0 && videoCount === 0 ? (
+            <div className="bg-white rounded-2xl p-6 sm:p-8 text-center max-w-sm">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-700 mb-2">
+                No Data Yet
+              </h3>
+
+              <p className="text-gray-500 text-sm sm:text-base">
+                No interaction data available yet
+              </p>
+            </div>
+
+          ) : (
+            <PieChart
+              width={260}
+              height={260}
+            >
               <Pie
                 data={data}
-                cx="50%"
-                cy="50%"
-                outerRadius="80%"
+                innerRadius="45%"   // 🔥 smaller donut
+                outerRadius="70%"   // 🔥 prevent overflow
+                cornerRadius={8}
+                paddingAngle={4}
                 dataKey="value"
-                label
+                isAnimationActive={true}
               >
                 {data.map((entry, index) => (
                   <Cell key={index} fill={COLORS[index]} />
@@ -52,7 +68,8 @@ const Stats = () => {
               <Tooltip />
               <Legend />
             </PieChart>
-          </ResponsiveContainer>
+          )}
+
         </div>
 
       </div>
