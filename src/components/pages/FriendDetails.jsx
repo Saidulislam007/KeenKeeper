@@ -28,7 +28,11 @@ const FriendDetails = () => {
                         />
 
                         <h2 className="text-base sm:text-lg font-semibold">{name}</h2>
-
+                        <div className="flex gap-2 mt-2">
+                            <span className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">
+                                {status}
+                            </span>
+                        </div>
                         <div className="mt-2 flex flex-wrap justify-center gap-2">
                             {tags.map((tag, index) => (
                                 <span
@@ -40,11 +44,7 @@ const FriendDetails = () => {
                             ))}
                         </div>
 
-                        <div className="flex gap-2 mt-2">
-                            <span className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">
-                                {status}
-                            </span>
-                        </div>
+                        
 
                         <p className="text-xs sm:text-sm text-gray-500 mt-3 italic">
                             {bio}

@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+import { toast } from "react-toastify";
+
 
 export const FriendContext = createContext();
 
@@ -19,8 +21,14 @@ export const FriendProvider = ({ children }) => {
         );
 
         if (!isExist) {
-            setTimeline([...timeline, newData]);
-        }
+        setTimeline([...timeline, newData]);
+
+        // ✅ success toast
+        toast.success(`${type.toUpperCase()} added successfully`);
+    } else {
+        // ❌ warning toast
+        toast.warn(`This ${type} already exists`);
+    }
     };
 
     const data ={
