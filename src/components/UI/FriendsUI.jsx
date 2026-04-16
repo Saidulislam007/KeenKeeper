@@ -4,11 +4,11 @@ import { Link } from 'react-router';
 const getStatusStyle = (status) => {
   switch (status) {
     case "overdue":
-      return "bg-red-100 text-red-600";
+      return "bg-red-300 text-red-600";
     case "almost due":
       return "bg-yellow-100 text-yellow-700";
     case "on-track":
-      return "bg-emerald-100 text-emerald-700";
+      return "bg-emerald-400 text-emerald-700";
     default:
       return "bg-gray-100 text-gray-600";
   }
@@ -54,7 +54,7 @@ const FriendsUI = ({ friend }) => {
 
         <div className="flex gap-2 mt-3">
           <span
-            className={`px-3 py-1 text-xs rounded-full ${getStatusStyle(friend.status)}`}
+            className={`px-3 py-1 text-xs text-white rounded-full ${getStatusStyle(friend.status)}`}
           >
             {friend.status}
           </span>
