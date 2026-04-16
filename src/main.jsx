@@ -11,6 +11,8 @@ import Timeline from './components/pages/Timeline.jsx';
 import Stats from './components/pages/Stats.jsx';
 import Home from './components/pages/Home.jsx';
 import FriendDetails from './components/pages/FriendDetails.jsx';
+import { FriendProvider } from './components/context/FriendContext.jsx';
+
 
 
 
@@ -34,7 +36,7 @@ const router = createBrowserRouter([
         element: <Stats />,
       },
       {
-        path:"/friendDetails/:id",
+        path: "/friendDetails/:id",
         element: <FriendDetails></FriendDetails>
       }
     ]
@@ -43,6 +45,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <FriendProvider>
+      <RouterProvider router={router} />
+    </FriendProvider>
   </StrictMode>,
 )

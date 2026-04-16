@@ -6,13 +6,17 @@ const Navbar = () => {
 
     const [open, setOpen] = useState(false);
     return (
-        <div className="bg-gray-200 p-2">
+        <div className="bg-white p-2">
       <div className="max-w-7xl mx-auto flex justify-between items-center  p-2">
         
        
-        <h1 className="text-3xl font-bold  px-3 py-1">
-          KeenKeeper
-        </h1>
+        <h1 className="text-3xl font-bold px-3 py-1 flex items-center">
+  <img
+    src="/src/assets/logo.png"
+    alt="logo"
+    className="w-50 h-20 object-contain"
+  />
+</h1>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-3 p-2">

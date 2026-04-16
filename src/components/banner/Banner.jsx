@@ -35,7 +35,7 @@ const Banner = () => {
 
         {/* Card 2 */}
         <div className="bg-white p-6 rounded-xl shadow text-center">
-          <h2 className="text-2xl font-bold text-gray-800">5</h2>
+          <h2 className="text-2xl font-bold text-gray-800">4</h2>
           <p className="text-gray-500">On Track</p>
         </div>
 
