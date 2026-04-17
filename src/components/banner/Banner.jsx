@@ -1,6 +1,6 @@
 import { UserPlus } from 'lucide-react';
 import React, { use } from 'react';
-const friendsData = fetch('/public/friends.json').then(res => res.json());
+const friendsData = fetch('/friends.json').then(res => res.json());
 
 const Banner = () => {
   const friends = use(friendsData);

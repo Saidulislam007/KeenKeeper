@@ -11,11 +11,7 @@ const Navbar = () => {
         
        
         <h1 className="text-3xl font-bold px-3 py-1 flex items-center">
-  <img
-    src="/src/assets/logo.png"
-    alt="logo"
-    className="w-50 h-20 object-contain"
-  />
+  Keen <span className="text-emerald-900">Keeper</span>
 </h1>
 
         {/* Desktop Menu */}

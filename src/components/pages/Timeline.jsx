@@ -63,13 +63,13 @@ const Timeline = () => {
         <div className="flex justify-center sm:justify-start">
           <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
             {item.type === "Call" && (
-              <img src="/src/assets/call.png" alt="call" className="w-8 h-8 sm:w-10 sm:h-10" />
+              <img src="/call.png" alt="call" className="w-8 h-8 sm:w-10 sm:h-10" />
             )}
             {item.type === "Text" && (
-              <img src="/src/assets/text.png" alt="text" className="w-8 h-8 sm:w-10 sm:h-10" />
+              <img src="/text.png" alt="text" className="w-8 h-8 sm:w-10 sm:h-10" />
             )}
             {item.type === "Video" && (
-              <img src="/src/assets/video.png" alt="video" className="w-8 h-8 sm:w-10 sm:h-10" />
+              <img src="/video.png" alt="video" className="w-8 h-8 sm:w-10 sm:h-10" />
             )}
           </div>
         </div>
